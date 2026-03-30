@@ -1,16 +1,23 @@
-## Hi there 👋
+<h1 align="center">👋 Hi, I'm LuoLan</h1>
+<h3 align="center">A .NET developer</h3>
 
-<!--
-**luolangaga/luolangaga** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<p align="center">
+  <a href="https://idvevent.cn">
+    <img src="https://img.shields.io/badge/Portfolio-YourSite-blue?style=flat-square&logo=google-chrome" />
+  <a href="mailto:luolan233@outlook.com">
+    <img src="https://img.shields.io/badge/Email-Contact-red?style=flat-square&logo=gmail" />
+  </a>
+</p>
 
-Here are some ideas to get you started:
+<!-- 一句话简介 -->
+<p align="center">
+  🔭 I’m Student at <strong>Southwest Minzu University</strong><br>
+  🌱 I’m currently learning <strong>.NET  & Vue</strong><br>
+  💬 Ask me about <strong>JavaScript, C#, and open source</strong>
+</p>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<!-- GitHub 统计卡片（两列布局） -->
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=luolangaga&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=luolangaga &layout=compact&theme=radical" alt="Top Langs" />
+</p>
