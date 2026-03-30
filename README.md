@@ -16,8 +16,8 @@
   💬 Ask me about <strong>JavaScript, C#, and open source</strong>
 </p>
 
-<!-- GitHub 统计卡片（两列布局） -->
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=luolangaga&show_icons=true&theme=radical" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=luolangaga &layout=compact&theme=radical" alt="Top Langs" />
-</p>
+<picture decoding="async" loading="lazy">
+  <source media="(prefers-color-scheme: light)" srcset="https://pixel-profile.vercel.app/api/github-stats?username=luolangaga&screen_effect=false&background=linear-gradient(to%20bottom%20right%2C%20%2374dcc4%2C%20%234597e9)">
+  <source media="(prefers-color-scheme: dark)" srcset="https://pixel-profile.vercel.app/api/github-stats?username=luolangaga&screen_effect=true&background=linear-gradient(to%20bottom%20right%2C%20%235580eb%2C%20%232aeeff)">
+  <img alt="github stats" src="https://pixel-profile.vercel.app/api/github-stats?username=你的用户名&screen_effect=false&background=linear-gradient(to%20bottom%20right%2C%20%2374dcc4%2C%20%234597e9)">
+</picture>
