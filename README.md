@@ -11,7 +11,6 @@
 
 <!-- 一句话简介 -->
 <p align="center">
-  🔭 I’m Student at <strong>Southwest Minzu University</strong><br>
   🌱 I’m currently learning <strong>.NET  & Vue</strong><br>
   💬 Ask me about <strong>JavaScript, C#, and open source</strong>
 </p>
