@@ -3,13 +3,14 @@
 </p>
 
 <p align="center">
-  <img src="assets/about-note.svg" alt="A little about me. I build Windows apps with C# and WinUI 3. I’m learning .NET and Vue and happy to chat about JavaScript, C#, and open source." width="632">
-</p>
-
-<p align="center">
-  <a href="https://idvevent.cn"><img src="assets/portfolio-sticker.svg" alt="Open portfolio" width="139"></a>
-  &nbsp;
-  <a href="mailto:luolan233@outlook.com"><img src="assets/email-sticker.svg" alt="Send an email" width="139"></a>
+  <picture>
+    <source media="(max-width: 650px)" srcset="assets/about-note-mobile.svg">
+    <img align="left" src="assets/about-note.svg" alt="A little about me. I build Windows apps with C# and WinUI 3. I’m learning .NET and Vue and happy to chat about JavaScript, C#, and open source." width="69%">
+  </picture>
+  <a href="https://catyi.top/"><img src="assets/website-sticker.svg" alt="Personal website at catyi.top" width="24%"></a><br>
+  <a href="mailto:luolan233@outlook.com"><img src="assets/email-sticker.svg" alt="Send an email" width="24%"></a><br>
+  <a href="https://space.bilibili.com/351531595"><img src="assets/bilibili-sticker.svg" alt="Bilibili profile" width="24%"></a>
+  <br clear="all">
 </p>
 
 ## GitHub snapshot

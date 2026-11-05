@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="182" height="42" viewBox="0 0 182 42" role="img" aria-labelledby="title">
+  <title id="title">Personal website at catyi.top</title>
+  <style>
+    svg { --paper:#fff1ca; --line:#ddba77; --ink:#48384b; }
+    @media (prefers-color-scheme:dark) { svg { --paper:#42352f; --line:#93734f; --ink:#f6e5ef; } }
+    text { font-family:"Segoe Print","Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif; }
+  </style>
+  <path d="M17 3q70-1 148 0 14-1 14 15v5q0 17-16 16-74-2-147 0Q3 39 3 25v-7Q3 3 17 3Z" fill="var(--paper)" stroke="var(--line)" stroke-width="1.6"/>
+  <g transform="translate(15 10)" fill="none" stroke="var(--ink)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 11c0 6-4.2 10.4-10.6 10.6C5.1 22 1 17.5 1 11.4S5.3 1.2 11.4 1 22 5.1 22 11Z"/><path d="M1.8 11.3 21 11M11 1.3c-4.9 5.6-5 14.1 0 20m1-20c4.7 5.6 4.7 14 0 20"/>
+  </g>
+  <text x="48" y="28" font-size="20" font-weight="700" fill="var(--ink)">catyi.top</text>
+</svg>
