@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/meadow-header.svg#still">
-    <img src="assets/meadow-header.svg" alt="LuoLan · Windows apps and open source · C#, .NET, WinUI 3, and Vue" width="880">
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/meadow-companion.svg#still">
+    <img src="assets/meadow-companion.svg" alt="LuoLan · Windows apps and open source · A cream-colored companion waving from the meadow · C#, .NET, WinUI 3, and Vue" width="880">
   </picture>
 </p>
 
