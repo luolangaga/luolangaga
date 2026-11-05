@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="254" viewBox="0 0 880 254" role="img" aria-labelledby="title description">
+  <title id="title">LuoLan</title>
+  <desc id="description">A .NET developer building Windows apps. Mint and lavender lights orbit a four-pane window.</desc>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1">
+      <stop stop-color="#101b2d"/>
+      <stop offset="1" stop-color="#0d1221"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop stop-color="#6359af" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#6359af" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panes" x2="1" y2="1">
+      <stop stop-color="#9ef5da"/>
+      <stop offset="1" stop-color="#a9a0ff"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#c4d4f6" stroke-opacity=".10"/>
+    </pattern>
+    <clipPath id="frame">
+      <rect x="1" y="1" width="878" height="252" rx="20"/>
+    </clipPath>
+    <style>
+      .orbit { transform-origin: 687px 125px; animation: orbit 16s linear infinite; }
+      .orbit-reverse { transform-origin: 687px 125px; animation: orbit 23s linear infinite reverse; }
+      .ping { transform-origin: 687px 125px; animation: ping 4s ease-out infinite; }
+      @keyframes orbit { to { transform: rotate(360deg); } }
+      @keyframes ping {
+        0% { transform: scale(.84); opacity: 0; }
+        22% { opacity: .65; }
+        85%, 100% { transform: scale(1.22); opacity: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .orbit, .orbit-reverse { animation: none; }
+        .ping { display: none; }
+      }
+    </style>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="880" height="254" fill="url(#surface)"/>
+    <rect x="511" width="369" height="254" fill="url(#grid)"/>
+    <ellipse cx="687" cy="125" rx="172" ry="139" fill="url(#halo)"/>
+    <path d="M511 1V253" stroke="#2b3850" stroke-dasharray="3 6"/>
+
+    <g font-family="Consolas, Liberation Mono, monospace" font-size="14" letter-spacing="2">
+      <circle cx="49" cy="52" r="4" fill="#9ef5da"/>
+      <text x="65" y="57" fill="#9ef5da">LUOLANGAGA / GITHUB</text>
+      <text x="45" y="213" fill="#b7c6de">C#  /  .NET  /  WINUI 3</text>
+    </g>
+    <g font-family="Segoe UI, Arial, sans-serif">
+      <text x="43" y="130" font-size="70" font-weight="700" fill="#f3f6ff">LuoLan</text>
+      <text x="46" y="171" font-size="25" fill="#c2cde3">Building apps for Windows.</text>
+    </g>
+
+    <g fill="none" stroke="#66739a">
+      <circle cx="687" cy="125" r="98" stroke-opacity=".52" stroke-dasharray="2 6"/>
+      <circle cx="687" cy="125" r="77" stroke-opacity=".56"/>
+      <circle cx="687" cy="125" r="55" stroke-opacity=".45"/>
+      <circle class="ping" cx="687" cy="125" r="66" stroke="#9ef5da" opacity="0"/>
+      <path d="M575 125h15m194 0h15M687 14v12m0 198v12" stroke-opacity=".8"/>
+    </g>
+    <path d="M657 95h28v28h-28zm32 0h28v28h-28zm-32 32h28v28h-28zm32 0h28v28h-28z" fill="url(#panes)"/>
+    <g class="orbit" fill="#9ef5da">
+      <circle cx="785" cy="125" r="11" opacity=".17"/>
+      <circle cx="785" cy="125" r="4.5"/>
+    </g>
+    <g class="orbit-reverse" fill="#bcb1ff">
+      <circle cx="640" cy="186" r="8" opacity=".2"/>
+      <circle cx="640" cy="186" r="3.6"/>
+    </g>
+  </g>
+  <rect x="1" y="1" width="878" height="252" rx="20" fill="none" stroke="#35435f"/>
+</svg>

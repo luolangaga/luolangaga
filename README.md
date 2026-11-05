@@ -1,22 +1,33 @@
-<h1 align="center">👋 Hi, I'm LuoLan</h1>
-<h3 align="center">A .NET developer</h3>
-
 <p align="center">
-  <a href="https://idvevent.cn">
-    <img src="https://img.shields.io/badge/Portfolio-YourSite-blue?style=flat-square&logo=google-chrome" />
-  <a href="mailto:luolan233@outlook.com">
-    <img src="https://img.shields.io/badge/Email-Contact-red?style=flat-square&logo=gmail" />
-  </a>
+  <img src="assets/header.svg" alt="LuoLan · .NET developer building Windows apps" width="880">
 </p>
 
-<!-- 一句话简介 -->
+<h1 align="center">Hi, I'm LuoLan 👋</h1>
+
 <p align="center">
-  🌱 I’m currently learning <strong>.NET  & Vue</strong><br>
-  💬 Ask me about <strong>JavaScript, C#, and open source</strong>
+  I build Windows apps with C# and WinUI 3.<br>
+  I’m learning more about .NET and Vue, and I’m happy to chat about JavaScript, C#, and open source.
 </p>
 
-<picture decoding="async" loading="lazy">
-  <source media="(prefers-color-scheme: light)" srcset="https://pixel-profile.vercel.app/api/github-stats?username=luolangaga&screen_effect=false&background=linear-gradient(to%20bottom%20right%2C%20%2374dcc4%2C%20%234597e9)">
-  <source media="(prefers-color-scheme: dark)" srcset="https://pixel-profile.vercel.app/api/github-stats?username=luolangaga&screen_effect=true&background=linear-gradient(to%20bottom%20right%2C%20%235580eb%2C%20%232aeeff)">
-  <img alt="github stats" src="https://pixel-profile.vercel.app/api/github-stats?username=你的用户名&screen_effect=false&background=linear-gradient(to%20bottom%20right%2C%20%2374dcc4%2C%20%234597e9)">
-</picture>
+<p align="center">
+  <a href="https://idvevent.cn">Portfolio</a>
+  &nbsp;·&nbsp;
+  <a href="mailto:luolan233@outlook.com">Email</a>
+</p>
+
+## GitHub snapshot
+
+<p align="center">
+  <img src="assets/github-stats.svg" alt="GitHub statistics showing stars, followers, and public source repositories" width="426">
+  <img src="assets/languages.svg" alt="Most common primary languages across public source repositories" width="426">
+</p>
+
+<p align="center">
+  <sub>Refreshed daily from GitHub. Repository stats exclude forks.</sub>
+</p>
+
+## Selected projects
+
+- [**图吧工具箱 · TubaTools**](https://github.com/luolangaga/tubatools) — WinUI 3 hardware diagnostics, benchmarking, and real-time monitoring.
+- [**WinLand**](https://github.com/luolangaga/WinLand) — A Dynamic Island for Windows 11 with support for plugins.
+- [**LanAgent**](https://github.com/luolangaga/AllAgent.NET) — A .NET CodeAct agent with Hyperlight isolation and terminal and desktop interfaces.

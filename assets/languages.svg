@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="426" height="178" viewBox="0 0 426 178" role="img" aria-labelledby="title description">
+  <title id="title">Primary languages</title>
+  <desc id="description">Repositories by primary language. C#: 16, JavaScript: 4, HTML: 3, Other: 2.</desc>
+  <rect x=".5" y=".5" width="425" height="177" rx="16" fill="#101827" stroke="#35435f"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="22" y="34" font-size="12" fill="#9ef5da" letter-spacing="2">02 / GITHUB SNAPSHOT</text>
+    <text x="22" y="66" font-size="24" font-weight="700" fill="#f3f6ff">Primary languages</text>
+    <clipPath id="bar"><rect x="22" y="87" width="382" height="12" rx="6"/></clipPath>
+    <g clip-path="url(#bar)">
+      <rect x="22.00" y="87" width="244.48" height="12" fill="#9ef5da"/>
+      <rect x="266.48" y="87" width="61.12" height="12" fill="#bcb1ff"/>
+      <rect x="327.60" y="87" width="45.84" height="12" fill="#95c7ff"/>
+      <rect x="373.44" y="87" width="30.56" height="12" fill="#ffc78f"/>
+    </g>
+    <circle cx="26" cy="119" r="4" fill="#9ef5da"/>
+    <text x="37" y="123" font-size="13" fill="#d9e3f4">C#</text>
+    <text x="205" y="123" text-anchor="end" font-size="13" fill="#bcc9df">16</text>
+    <circle cx="221" cy="119" r="4" fill="#bcb1ff"/>
+    <text x="232" y="123" font-size="13" fill="#d9e3f4">JavaScript</text>
+    <text x="400" y="123" text-anchor="end" font-size="13" fill="#bcc9df">4</text>
+    <circle cx="26" cy="143" r="4" fill="#95c7ff"/>
+    <text x="37" y="147" font-size="13" fill="#d9e3f4">HTML</text>
+    <text x="205" y="147" text-anchor="end" font-size="13" fill="#bcc9df">3</text>
+    <circle cx="221" cy="143" r="4" fill="#ffc78f"/>
+    <text x="232" y="147" font-size="13" fill="#d9e3f4">Other</text>
+    <text x="400" y="147" text-anchor="end" font-size="13" fill="#bcc9df">2</text>
+  </g>
+</svg>
