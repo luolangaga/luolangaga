@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="428" height="337" viewBox="0 0 428 337" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub snapshot</title>
+  <desc id="desc">Stars: 6,219, Followers: 97, Public repos: 32, C#: 16 repositories, JavaScript: 5 repositories, HTML: 3 repositories, Other: 2 repositories</desc>
+  <defs>
+    <style>
+      svg { --base:#f3f8fb; --tint:#cceaf4; --ink:#152c3d; --muted:#435d70; --accent:#14679d; --edge:#cedfe9; --highlight:#fff; --bar0:#2e8ec7; --bar1:#50b3bb; --bar2:#91badb; --bar3:#b7c7d7; }
+      @media (prefers-color-scheme:dark) {
+        svg { --base:#202b36; --tint:#224558; --ink:#f0f7ff; --muted:#becfdd; --accent:#91cfff; --edge:#445e71; --highlight:#668396; --bar0:#65b7ea; --bar1:#69c5c9; --bar2:#8aaac9; --bar3:#778a9e; }
+      }
+      text { font-family:Segoe UI Variable, Segoe UI, system-ui, sans-serif; }
+      .heading { font-size:24px; font-weight:650; fill:var(--ink); }
+      .caption, .label { font-size:15px; fill:var(--muted); }
+      .value { font-size:36px; font-weight:650; fill:var(--accent); }
+    </style>
+    <radialGradient id="mica" cx=".82" cy="0" r=".8">
+      <stop stop-color="var(--tint)"/>
+      <stop offset="1" stop-color="var(--base)"/>
+    </radialGradient>
+    <clipPath id="bar"><rect y="64" width="380" height="12" rx="6"/></clipPath>
+  </defs>
+  <rect x=".5" y=".5" width="427" height="336" rx="16" fill="url(#mica)" stroke="var(--edge)"/>
+  <path d="M17 1.5h394" stroke="var(--highlight)" stroke-opacity=".8"/>
+  <path d="M24 165h380" stroke="var(--edge)"/>
+  <g transform="translate(24 25)">
+      <text x="0" y="21" class="heading">Open source</text>
+      <text x="0" y="46" class="caption">Public GitHub activity</text>
+      <text x="0" y="99" class="value">6,219</text>
+      <text x="1" y="126" class="label">Stars</text>
+      <text x="129" y="99" class="value">97</text>
+      <text x="130" y="126" class="label">Followers</text>
+      <text x="258" y="99" class="value">32</text>
+      <text x="259" y="126" class="label">Public repos</text>
+  </g>
+  <g transform="translate(24 185)">
+      <text x="0" y="21" class="heading">Primary languages</text>
+      <text x="0" y="46" class="caption">Public repositories by main language</text>
+      <g clip-path="url(#bar)">
+        <rect x="0.00" y="64" width="233.85" height="12" fill="var(--bar0)"/>
+        <rect x="233.85" y="64" width="73.08" height="12" fill="var(--bar1)"/>
+        <rect x="306.92" y="64" width="43.85" height="12" fill="var(--bar2)"/>
+        <rect x="350.77" y="64" width="29.23" height="12" fill="var(--bar3)"/>
+      </g>
+      <circle cx="4" cy="99" r="4" fill="var(--bar0)"/>
+      <text x="16" y="104" class="label">C#</text>
+      <text x="182" y="104" class="label" text-anchor="end">16</text>
+      <circle cx="198" cy="99" r="4" fill="var(--bar1)"/>
+      <text x="210" y="104" class="label">JavaScript</text>
+      <text x="376" y="104" class="label" text-anchor="end">5</text>
+      <circle cx="4" cy="122" r="4" fill="var(--bar2)"/>
+      <text x="16" y="127" class="label">HTML</text>
+      <text x="182" y="127" class="label" text-anchor="end">3</text>
+      <circle cx="198" cy="122" r="4" fill="var(--bar3)"/>
+      <text x="210" y="127" class="label">Other</text>
+      <text x="376" y="127" class="label" text-anchor="end">2</text>
+  </g>
+</svg>

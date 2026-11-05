@@ -1,73 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="254" viewBox="0 0 880 254" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="248" viewBox="0 0 880 248" role="img" aria-labelledby="title desc">
   <title id="title">LuoLan</title>
-  <desc id="description">A .NET developer building Windows apps. Mint and lavender lights orbit a four-pane window.</desc>
+  <desc id="desc">Windows apps and open source. Three ice-blue glass windows float over a teal backdrop.</desc>
   <defs>
-    <linearGradient id="surface" x2="1" y2="1">
-      <stop stop-color="#101b2d"/>
-      <stop offset="1" stop-color="#0d1221"/>
-    </linearGradient>
-    <radialGradient id="halo">
-      <stop stop-color="#6359af" stop-opacity=".32"/>
-      <stop offset="1" stop-color="#6359af" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="panes" x2="1" y2="1">
-      <stop stop-color="#9ef5da"/>
-      <stop offset="1" stop-color="#a9a0ff"/>
-    </linearGradient>
-    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M24 0H0V24" fill="none" stroke="#c4d4f6" stroke-opacity=".10"/>
-    </pattern>
-    <clipPath id="frame">
-      <rect x="1" y="1" width="878" height="252" rx="20"/>
-    </clipPath>
     <style>
-      .orbit { transform-origin: 687px 125px; animation: orbit 16s linear infinite; }
-      .orbit-reverse { transform-origin: 687px 125px; animation: orbit 23s linear infinite reverse; }
-      .ping { transform-origin: 687px 125px; animation: ping 4s ease-out infinite; }
-      @keyframes orbit { to { transform: rotate(360deg); } }
-      @keyframes ping {
-        0% { transform: scale(.84); opacity: 0; }
-        22% { opacity: .65; }
-        85%, 100% { transform: scale(1.22); opacity: 0; }
+      svg { --base:#f4f9fc; --ink:#142c3c; --muted:#3e5b6c; --accent:#125b90; --edge:#c9dce7; --mist:#addfe8; --blue:#84c5f0; --pill:white; --grid:#52829d; --shadow:#245478; }
+      @media (prefers-color-scheme:dark) {
+        svg { --base:#202b36; --ink:#f3f8ff; --muted:#c3d4df; --accent:#a7dcff; --edge:#486172; --mist:#215e70; --blue:#276394; --pill:#30485a; --grid:#a8cce1; --shadow:#071322; }
       }
-      @media (prefers-reduced-motion: reduce) {
-        .orbit, .orbit-reverse { animation: none; }
-        .ping { display: none; }
-      }
+      .float { animation: hover 8s ease-in-out infinite; }
+      @keyframes hover { 50% { transform: translateY(-7px); } }
+      @media (prefers-reduced-motion:reduce) { .float { animation:none; } }
     </style>
+    <clipPath id="frame"><rect x="1" y="1" width="878" height="246" rx="20"/></clipPath>
+    <radialGradient id="mist" cx=".82" cy=".15" r=".72"><stop stop-color="var(--mist)"/><stop offset="1" stop-color="var(--mist)" stop-opacity="0"/></radialGradient>
+    <radialGradient id="blue" cx=".98" cy=".98" r=".6"><stop stop-color="var(--blue)" stop-opacity=".74"/><stop offset="1" stop-color="var(--blue)" stop-opacity="0"/></radialGradient>
+    <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#f9ffff" stop-opacity=".94"/><stop offset=".47" stop-color="#d7f7fd" stop-opacity=".69"/><stop offset="1" stop-color="#71b9e8" stop-opacity=".7"/></linearGradient>
+    <linearGradient id="rim" x2=".8" y2="1"><stop stop-color="#fff"/><stop offset=".56" stop-color="#ebffff" stop-opacity=".66"/><stop offset="1" stop-color="#7bb5d8"/></linearGradient>
+    <linearGradient id="tile" x2="1" y2="1"><stop stop-color="#54d3e6"/><stop offset=".5" stop-color="#168cd3"/><stop offset="1" stop-color="#3265c1"/></linearGradient>
+    <linearGradient id="shine" x2=".75" y2="1"><stop stop-color="#fff" stop-opacity=".72"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="fade"><stop offset=".43" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></linearGradient>
+    <mask id="gridFade"><rect width="880" height="248" fill="url(#fade)"/></mask>
+    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(-22)"><path d="M26 0H0V26" fill="none" stroke="var(--grid)" stroke-opacity=".25"/></pattern>
+    <filter id="lift" x="-.24" y="-.24" width="1.48" height="1.65"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="var(--shadow)" flood-opacity=".29"/></filter>
+    <rect id="pane" width="195" height="144" rx="17" fill="url(#glass)" stroke="url(#rim)" stroke-width="2"/>
   </defs>
   <g clip-path="url(#frame)">
-    <rect width="880" height="254" fill="url(#surface)"/>
-    <rect x="511" width="369" height="254" fill="url(#grid)"/>
-    <ellipse cx="687" cy="125" rx="172" ry="139" fill="url(#halo)"/>
-    <path d="M511 1V253" stroke="#2b3850" stroke-dasharray="3 6"/>
-
-    <g font-family="Consolas, Liberation Mono, monospace" font-size="14" letter-spacing="2">
-      <circle cx="49" cy="52" r="4" fill="#9ef5da"/>
-      <text x="65" y="57" fill="#9ef5da">LUOLANGAGA / GITHUB</text>
-      <text x="45" y="213" fill="#b7c6de">C#  /  .NET  /  WINUI 3</text>
+    <rect width="880" height="248" fill="var(--base)"/>
+    <rect width="880" height="248" fill="url(#mist)"/>
+    <rect width="880" height="248" fill="url(#blue)"/>
+    <rect x="418" width="462" height="248" fill="url(#grid)" mask="url(#gridFade)"/>
+    <g font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif">
+      <rect x="40" y="31" width="130" height="29" rx="14.5" fill="var(--pill)" fill-opacity=".76" stroke="var(--edge)"/>
+      <circle cx="55" cy="45.5" r="3.5" fill="var(--accent)"/>
+      <text x="66" y="50" font-size="13" font-weight="600" fill="var(--accent)">@luolangaga</text>
+      <text x="36" y="130" font-size="74" font-weight="650" letter-spacing="-3" fill="var(--ink)">LuoLan</text>
+      <text x="41" y="168" font-size="25" font-weight="500" fill="var(--muted)">Windows apps &amp; open source</text>
+      <path d="M41 192h254" stroke="var(--edge)"/>
+      <text x="41" y="217" font-size="16" font-weight="600" fill="var(--accent)">C#  ·  .NET  ·  WinUI 3</text>
     </g>
-    <g font-family="Segoe UI, Arial, sans-serif">
-      <text x="43" y="130" font-size="70" font-weight="700" fill="#f3f6ff">LuoLan</text>
-      <text x="46" y="171" font-size="25" fill="#c2cde3">Building apps for Windows.</text>
+    <g transform="matrix(1 -.21 .42 .86 511 75)">
+      <use href="#pane" x="81" y="48" filter="url(#lift)"/>
+      <use href="#pane" x="43" y="25" filter="url(#lift)"/>
+      <path d="M61 52h155m-155 94h53" fill="none" stroke="#fff" stroke-opacity=".55"/>
     </g>
-
-    <g fill="none" stroke="#66739a">
-      <circle cx="687" cy="125" r="98" stroke-opacity=".52" stroke-dasharray="2 6"/>
-      <circle cx="687" cy="125" r="77" stroke-opacity=".56"/>
-      <circle cx="687" cy="125" r="55" stroke-opacity=".45"/>
-      <circle class="ping" cx="687" cy="125" r="66" stroke="#9ef5da" opacity="0"/>
-      <path d="M575 125h15m194 0h15M687 14v12m0 198v12" stroke-opacity=".8"/>
-    </g>
-    <path d="M657 95h28v28h-28zm32 0h28v28h-28zm-32 32h28v28h-28zm32 0h28v28h-28z" fill="url(#panes)"/>
-    <g class="orbit" fill="#9ef5da">
-      <circle cx="785" cy="125" r="11" opacity=".17"/>
-      <circle cx="785" cy="125" r="4.5"/>
-    </g>
-    <g class="orbit-reverse" fill="#bcb1ff">
-      <circle cx="640" cy="186" r="8" opacity=".2"/>
-      <circle cx="640" cy="186" r="3.6"/>
+    <g class="float">
+      <g transform="matrix(1 -.21 .42 .86 511 75)">
+        <use href="#pane" filter="url(#lift)"/>
+        <path d="M1 25V17A16 16 0 0 1 17 1H178A16 16 0 0 1 194 17V25Z" fill="#fff" fill-opacity=".42"/>
+        <path d="M1 25h193" stroke="#fff" stroke-opacity=".72"/>
+        <path d="M146 13h10m8-3h6v6h-6zm14-3 6 6m0-6-6 6" fill="none" stroke="#366886" stroke-linecap="round" opacity=".72"/>
+        <path d="M68 51h26v26H68zm33 0h26v26h-26zm-33 33h26v26H68zm33 0h26v26h-26z" fill="url(#tile)" stroke="#e8ffff" stroke-opacity=".65"/>
+        <path d="M1 55 116 26h46L1 93Z" fill="url(#shine)" opacity=".55"/>
+      </g>
     </g>
   </g>
-  <rect x="1" y="1" width="878" height="252" rx="20" fill="none" stroke="#35435f"/>
+  <rect x="1" y="1" width="878" height="246" rx="20" fill="none" stroke="var(--edge)"/>
 </svg>

@@ -1,8 +1,6 @@
 <p align="center">
-  <img src="assets/header.svg" alt="LuoLan · .NET developer building Windows apps" width="880">
+  <img src="assets/header.svg" alt="LuoLan · Windows apps and open source" width="880">
 </p>
-
-<h1 align="center">Hi, I'm LuoLan 👋</h1>
 
 <p align="center">
   I build Windows apps with C# and WinUI 3.<br>
@@ -18,8 +16,10 @@
 ## GitHub snapshot
 
 <p align="center">
-  <img src="assets/github-stats.svg" alt="GitHub statistics showing stars, followers, and public source repositories" width="426">
-  <img src="assets/languages.svg" alt="Most common primary languages across public source repositories" width="426">
+  <picture>
+    <source media="(max-width: 650px)" srcset="assets/github-snapshot-mobile.svg">
+    <img src="assets/github-snapshot.svg" alt="Stars, followers, public source repositories, and primary languages" width="880">
+  </picture>
 </p>
 
 <p align="center">
