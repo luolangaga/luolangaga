@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="139" height="49" viewBox="0 0 139 49" role="img" aria-labelledby="title">
+  <title id="title">Send an email</title>
+  <style>
+    svg { --paper:#ffe8ec; --line:#dba5b9; --ink:#48384b; }
+    @media (prefers-color-scheme:dark) { svg { --paper:#422d3c; --line:#94617b; --ink:#f6e5ef; } }
+    text { font-family:"Segoe Print","Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif; }
+  </style>
+  <path d="M17 5q48-1 102 0 15-1 16 16l-.5 6q-1 17-16 17-57-2-101 0Q3 44 3 27v-7Q3 5 17 5Z" fill="var(--paper)" stroke="var(--line)" stroke-width="1.6"/>
+  <g transform="translate(13 14)" fill="none" stroke="var(--ink)" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1 4q11-.8 22 0l-.3 14-21.7.3Z"/><path d="m1 5 10.8 8L23 5m-17 9 2-2m9 2-2-2"/>
+  </g>
+  <text x="42" y="31" font-size="16" font-weight="700" fill="var(--ink)">Email</text>
+</svg>

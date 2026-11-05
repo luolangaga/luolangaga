@@ -27,7 +27,22 @@ function countLanguages(repositories) {
     const other = ranked.slice(3).reduce((sum, [, count]) => sum + count, 0);
     leading.push(['Other', other]);
   }
-  return leading;
+  const total = leading.reduce((sum, [, count]) => sum + count, 0);
+  if (!total) return [];
+
+  // Allocate any rounding difference to the largest remainders.
+  const shares = leading.map(([language, count]) => ({
+    language,
+    count,
+    percent: Math.floor(count * 100 / total),
+    remainder: (count * 100) % total,
+  }));
+  const unallocated = 100 - shares.reduce((sum, { percent }) => sum + percent, 0);
+  const largestRemainders = [...shares].sort((a, b) => b.remainder - a.remainder);
+  for (const share of largestRemainders.slice(0, unallocated)) {
+    share.percent++;
+  }
+  return shares;
 }
 
 function statsSection(metrics) {
@@ -48,29 +63,29 @@ function statsSection(metrics) {
 }
 
 function languageSection(languages) {
-  const total = languages.reduce((sum, [, count]) => sum + count, 0);
+  const total = languages.reduce((sum, { count }) => sum + count, 0);
   const heading = `<text x="0" y="21" class="heading">Primary languages</text>
       <path d="M1 28q100 5 247 0" class="underline purple"/>
-      <text x="0" y="46" class="caption">Public repositories by main language</text>`;
+      <text x="0" y="46" class="caption">Share of public repos by main language</text>`;
   if (!total) {
     return `${heading}
       <text x="0" y="95" class="label">No language data available</text>`;
   }
 
   let x = 0;
-  const bars = languages.map(([, count], index) => {
+  const bars = languages.map(({ count }, index) => {
     const width = count / total * sectionWidth;
     const bar = `<rect x="${x.toFixed(2)}" y="64" width="${width.toFixed(2)}" height="12" fill="var(--bar${index})"/>`;
     x += width;
     return bar;
   }).join('\n        ');
-  const legend = languages.map(([language, count], index) => {
+  const legend = languages.map(({ language, percent }, index) => {
     const x = (index % 2) * 194;
     const y = 104 + Math.floor(index / 2) * 23;
     const label = escapeXml(language.length > 17 ? `${language.slice(0, 16)}…` : language);
     return `<circle cx="${x + 4}" cy="${y - 5}" r="4" fill="var(--bar${index})"/>
       <text x="${x + 16}" y="${y}" class="label">${label}</text>
-      <text x="${x + 182}" y="${y}" class="label" text-anchor="end">${number.format(count)}</text>`;
+      <text x="${x + 182}" y="${y}" class="label" text-anchor="end">${percent}%</text>`;
   }).join('\n      ');
 
   return `${heading}
@@ -87,7 +102,7 @@ function snapshot(metrics, languages, mobile) {
   const frame = `M16 3Q${width / 4} .5 ${width / 2} 3T${width - 17} 3Q${width - 3} 3 ${width - 3} 17L${width - 2} ${height - 19}Q${width - 3} ${height - 5} ${width - 17} ${height - 5}Q${width / 2} ${height - 2} 16 ${height - 5}Q2 ${height - 6} 3 ${height - 20}L2 18Q2 4 16 3Z`;
   const description = [
     ...metrics.map(([label, value]) => `${label}: ${number.format(value)}`),
-    ...languages.map(([label, value]) => `${label}: ${number.format(value)} repositories`),
+    ...languages.map(({ language, percent }) => `${language}: ${percent}%`),
   ].join(', ');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title desc">

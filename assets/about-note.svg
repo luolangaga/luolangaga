@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="632" height="156" viewBox="0 0 632 156" role="img" aria-labelledby="title desc">
+  <title id="title">A little about me</title>
+  <desc id="desc">I build Windows apps with C# and WinUI 3. I’m learning .NET and Vue and happy to chat about JavaScript, C#, and open source.</desc>
+  <style>
+    svg { --paper:#f5effe; --edge:#d6c4e8; --ink:#48384b; --tape:#f5c9d6; --pink:#d6809b; --rule:#d9ccea; }
+    @media (prefers-color-scheme:dark) {
+      svg { --paper:#32283c; --edge:#63506d; --ink:#f6e5ef; --tape:#80536c; --pink:#efa1bb; --rule:#4b3d5a; }
+    }
+    text { font-family:"Segoe Print","Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif; fill:var(--ink); }
+  </style>
+  <path d="M17 12q132-3 305 0t287-1q13 0 13 14l1 111q-1 14-13 14-150-3-308-1T18 151q-13-1-13-13L4 26q0-12 13-14Z" fill="var(--paper)" stroke="var(--edge)" stroke-width="1.7"/>
+  <path d="M18 73q293-2 593 0m-593 27q293-2 593 0m-593 28q293-2 593 0" fill="none" stroke="var(--rule)" stroke-opacity=".67"/>
+  <path d="M522 12q39-5 68-10l3 6-2 4 3 6-1 7q-34 4-67 9l-3-5 2-4-4-6Z" fill="var(--tape)" fill-opacity=".84"/>
+  <path d="m531 17 8-6m6 11 13-14m1 15 13-14m2 13 10-12" fill="none" stroke="var(--pink)" stroke-opacity=".55" stroke-width="1.5"/>
+  <text x="25" y="45" font-size="24" font-weight="700">A little about me</text>
+  <path d="M25 51q99 3 216-2" fill="none" stroke="var(--pink)" stroke-width="2.5" stroke-linecap="round"/>
+  <g font-size="22">
+    <text x="25" y="79">I build Windows apps with C# and WinUI 3.</text>
+    <text x="25" y="106">I’m learning .NET and Vue. Let’s chat about</text>
+    <text x="25" y="133">JavaScript, C#, and open source.</text>
+  </g>
+  <path d="M581 103c-4-8-13-4-7 4l7 7 8-8c5-8-6-10-8-3Z" fill="var(--tape)" stroke="var(--pink)" stroke-width="1.6" stroke-linejoin="round"/>
+</svg>
