@@ -2,18 +2,18 @@
   <title id="title">A little about me</title>
   <desc id="desc">I build Windows apps with C# and WinUI 3. I’m learning .NET and Vue and happy to chat about JavaScript, C#, and open source.</desc>
   <style>
-    svg { --paper:#f5effe; --edge:#d6c4e8; --ink:#48384b; --tape:#f5c9d6; --pink:#d6809b; --rule:#d9ccea; }
+    svg { --paper:#f8f5e4; --edge:#c8c8a7; --ink:#514334; --tape:#dce5b1; --accent:#809b56; --rule:#dfd7b8; }
     @media (prefers-color-scheme:dark) {
-      svg { --paper:#32283c; --edge:#63506d; --ink:#f6e5ef; --tape:#80536c; --pink:#efa1bb; --rule:#4b3d5a; }
+      svg { --paper:#32382c; --edge:#58634c; --ink:#fbefd9; --tape:#596d45; --accent:#b2c786; --rule:#4b5440; }
     }
     text { font-family:"Segoe Print","Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif; fill:var(--ink); }
   </style>
   <path d="M15 9q145-3 319 0 12 0 12 14l1 117q0 13-13 13-160-3-318 0Q4 152 4 139L3 23Q3 10 15 9Z" fill="var(--paper)" stroke="var(--edge)" stroke-width="1.7"/>
   <path d="M15 61q156-1 318 0m-318 21q156-1 318 0m-318 21q156-1 318 0m-318 21q156-1 318 0" fill="none" stroke="var(--rule)" stroke-opacity=".67"/>
   <path d="M275 10l50-7 4 18-50 7Z" fill="var(--tape)" fill-opacity=".84"/>
-  <path d="m282 15 8-6m5 8 11-11m1 13 11-11" fill="none" stroke="var(--pink)" stroke-opacity=".55" stroke-width="1.5"/>
+  <path d="m282 15 8-6m5 8 11-11m1 13 11-11" fill="none" stroke="var(--accent)" stroke-opacity=".55" stroke-width="1.5"/>
   <text x="15" y="34" font-size="21" font-weight="700">A little about me</text>
-  <path d="M15 40q83 3 183-1" fill="none" stroke="var(--pink)" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M15 40q83 3 183-1" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round"/>
   <g font-size="17">
     <text x="15" y="60">I build Windows apps</text>
     <text x="15" y="81">with C# and WinUI 3.</text>

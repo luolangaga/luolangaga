@@ -47,7 +47,7 @@ function countLanguages(repositories) {
 
 function statsSection(metrics) {
   return `<text x="0" y="21" class="heading">Open source</text>
-      <path d="M0 29q68 4 156-1" class="underline pink"/>
+      <path d="M0 29q68 4 156-1" class="underline green"/>
       <text x="0" y="46" class="caption">Public GitHub activity</text>
       <g transform="translate(0 75)" stroke-linecap="round" stroke-linejoin="round">
         <path d="m12-3 4 8 9 1-6 6 1 9-8-4-8 4 1-9-7-6 10-2Z" fill="var(--gold)" stroke="var(--star-ink)" stroke-width="1.7"/>
@@ -65,7 +65,7 @@ function statsSection(metrics) {
 function languageSection(languages) {
   const total = languages.reduce((sum, { count }) => sum + count, 0);
   const heading = `<text x="0" y="21" class="heading">Primary languages</text>
-      <path d="M1 28q100 5 247 0" class="underline purple"/>
+      <path d="M1 28q100 5 247 0" class="underline blue"/>
       <text x="0" y="46" class="caption">Share of public repos by main language</text>`;
   if (!total) {
     return `${heading}
@@ -110,17 +110,17 @@ function snapshot(metrics, languages, mobile) {
   <desc id="desc">${escapeXml(description)}</desc>
   <defs>
     <style>
-      svg { --paper:#fffbef; --ink:#48384b; --muted:#65516b; --edge:#ddc6d7; --rule:#b2a3c2; --pink:#e99aab; --purple:#b99ddb; --gold:#ffcf64; --star-ink:#765231; --bar0:#ac92d0; --bar1:#e396ad; --bar2:#88bdad; --bar3:#e7bb70; }
+      svg { --paper:#fff8e9; --ink:#514334; --muted:#675749; --edge:#d1c4a8; --rule:#b4a982; --green:#a5b966; --blue:#88bfc4; --gold:#f3ce73; --star-ink:#765536; --bar0:#a2b968; --bar1:#81bcc9; --bar2:#dfbd73; --bar3:#bca187; }
       @media (prefers-color-scheme:dark) {
-        svg { --paper:#292330; --ink:#f6e5ef; --muted:#dac6de; --edge:#624b65; --rule:#8f789f; --pink:#e594b4; --purple:#b395db; --gold:#efbc69; --star-ink:#62472b; --bar0:#ad95d5; --bar1:#dd91aa; --bar2:#86bcad; --bar3:#d8ae75; }
+        svg { --paper:#2b2c25; --ink:#fbefd9; --muted:#ded0b6; --edge:#555b47; --rule:#807d61; --green:#a2bb76; --blue:#88b8bd; --gold:#eec76c; --star-ink:#655035; --bar0:#a8bf76; --bar1:#85bec8; --bar2:#d7b871; --bar3:#b5a083; }
       }
       text { font-family:"Segoe Print","Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif; }
       .heading { font-size:23px; font-weight:700; fill:var(--ink); }
       .caption, .label { font-size:14px; fill:var(--muted); }
       .value { font-size:31px; font-weight:700; fill:var(--ink); }
       .underline { fill:none; stroke-width:2.4; stroke-linecap:round; }
-      .pink { stroke:var(--pink); }
-      .purple { stroke:var(--purple); }
+      .green { stroke:var(--green); }
+      .blue { stroke:var(--blue); }
     </style>
     <path id="sheet" d="${frame}"/>
     <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">

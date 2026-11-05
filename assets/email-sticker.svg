@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="182" height="42" viewBox="0 0 182 42" role="img" aria-labelledby="title">
   <title id="title">Send an email</title>
   <style>
-    svg { --paper:#ffe8ec; --line:#dba5b9; --ink:#48384b; }
-    @media (prefers-color-scheme:dark) { svg { --paper:#422d3c; --line:#94617b; --ink:#f6e5ef; } }
+    svg { --paper:#f7edda; --line:#c6b18c; --ink:#514334; }
+    @media (prefers-color-scheme:dark) { svg { --paper:#40382d; --line:#8c7657; --ink:#fbefd9; } }
     text { font-family:"Segoe Print","Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif; }
   </style>
   <path d="M17 3q70-1 148 0 14-1 14 15v5q0 17-16 16-74-2-147 0Q3 39 3 25v-7Q3 3 17 3Z" fill="var(--paper)" stroke="var(--line)" stroke-width="1.6"/>

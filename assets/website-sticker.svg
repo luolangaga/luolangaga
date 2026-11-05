@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="182" height="42" viewBox="0 0 182 42" role="img" aria-labelledby="title">
   <title id="title">Personal website at catyi.top</title>
   <style>
-    svg { --paper:#fff1ca; --line:#ddba77; --ink:#48384b; }
-    @media (prefers-color-scheme:dark) { svg { --paper:#42352f; --line:#93734f; --ink:#f6e5ef; } }
+    svg { --paper:#e9f1cd; --line:#a9bc78; --ink:#514334; }
+    @media (prefers-color-scheme:dark) { svg { --paper:#38432e; --line:#718659; --ink:#fbefd9; } }
     text { font-family:"Segoe Print","Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif; }
   </style>
   <path d="M17 3q70-1 148 0 14-1 14 15v5q0 17-16 16-74-2-147 0Q3 39 3 25v-7Q3 3 17 3Z" fill="var(--paper)" stroke="var(--line)" stroke-width="1.6"/>

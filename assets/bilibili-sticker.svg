@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="182" height="42" viewBox="0 0 182 42" role="img" aria-labelledby="title">
   <title id="title">Bilibili profile</title>
   <style>
-    svg { --paper:#e7f1fb; --line:#a5bed9; --ink:#48384b; }
-    @media (prefers-color-scheme:dark) { svg { --paper:#2e3d53; --line:#6e8daf; --ink:#f6e5ef; } }
+    svg { --paper:#dcf2f4; --line:#94bfc3; --ink:#514334; }
+    @media (prefers-color-scheme:dark) { svg { --paper:#2f4243; --line:#63888b; --ink:#fbefd9; } }
     text { font-family:"Segoe Print","Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif; }
   </style>
   <path d="M17 3q70-1 148 0 14-1 14 15v5q0 17-16 16-74-2-147 0Q3 39 3 25v-7Q3 3 17 3Z" fill="var(--paper)" stroke="var(--line)" stroke-width="1.6"/>
