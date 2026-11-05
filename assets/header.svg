@@ -1,16 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="248" viewBox="0 0 880 248" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="248" viewBox="0 0 880 248" id="still" role="img" aria-labelledby="title desc">
   <title id="title">LuoLan</title>
-  <desc id="desc">Windows apps and open source. A hand-drawn meadow with soft clouds and little paw prints.</desc>
+  <desc id="desc">Windows apps and open source. Clouds drift and a flower flutters above a hand-drawn meadow with paw prints and stickers for C#, .NET, WinUI 3, and Vue.</desc>
   <defs>
     <style>
       svg { --paper:#fff8e9; --ink:#514334; --muted:#675749; --edge:#d1c4a8; --rule:#d4c7ad; --sky:#b9ebf2; --sky-pale:#d8f2f1; --cloud:#fffbee; --far:#b0cd79; --near:#88ad56; --grass:#638746; --paw:#52683b; --margin:#83a870; }
       @media (prefers-color-scheme:dark) {
         svg { --paper:#2b2c25; --ink:#fbefd9; --muted:#ded0b6; --edge:#555b47; --rule:#6a6a55; --sky:#304e58; --sky-pale:#3a5357; --cloud:#bddad9; --far:#566b43; --near:#3c5536; --grass:#9db87a; --paw:#d2dbab; --margin:#9eb785; }
       }
-      .breeze { animation:breeze 10s ease-in-out infinite; }
-      @keyframes breeze { 50% { transform:translateX(9px); } }
-      @media (prefers-reduced-motion:reduce) { .breeze { animation:none; } }
+      .still { display:none; }
+      svg:target .moving { display:none; }
+      svg:target .still { display:inline; }
+      @media (prefers-reduced-motion:reduce) {
+        .moving { display:none; }
+        .still { display:inline; }
+      }
       text { font-family:"Segoe Print","Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif; }
+      .tech-label { fill:var(--ink); font-size:14px; font-weight:700; text-anchor:middle; paint-order:stroke; stroke:var(--paper); stroke-width:2.8; stroke-linejoin:round; }
     </style>
     <path id="page" d="M21 13Q222 7 433 11T860 10Q872 11 872 26L873 222Q871 237 856 236Q649 241 431 236T26 238Q10 236 10 222L8 29Q7 16 21 13Z"/>
     <clipPath id="pageClip"><use href="#page"/></clipPath>
@@ -22,6 +27,33 @@
     <pattern id="paper" width="28" height="28" patternUnits="userSpaceOnUse">
       <path d="M0 .5h28" stroke="var(--rule)" stroke-opacity=".25"/>
     </pattern>
+    <path id="cloud-near" d="M510 84c7-13 18-17 34-13 5-17 18-25 35-24 14-1 26 7 30 17 13-4 27 2 32 12 12 0 22 5 23 11-15 6-54 5-75 6-34 1-64-1-82-3Z"/>
+    <path id="cloud-far" d="M719 51c3-9 14-13 25-10 4-10 13-15 24-13 10 1 18 7 20 12 12-2 25 1 32 10 7 0 13 3 16 7-16 5-98 4-121 1Z" opacity=".75"/>
+    <g id="flower" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M732 111q-6-10-15-8 1 11 13 11-7 3-6 10 9 0 11-10 8 9 14 3-3-9-11-8 7-8 1-13-9 3-7 15Z" fill="#f4d98b"/>
+      <path d="m730 118 8-11m-2 3 6-2" fill="none"/>
+    </g>
+    <g id="tech-csharp">
+      <path d="M11 .7 20.5 5.8l-.2 11.1-9.3 5.2-9.6-5.6L1.7 6Z" fill="#dde9bd" stroke="#617347" stroke-width="1.35" stroke-linejoin="round"/>
+      <path d="M10.3 8.1c-4.1-2.8-6.3 3.1-3.9 5.6 1 1.1 2.8 1.3 4 .2m3-6.2-1 7.5m4.1-7.4-.9 7.3m-4.3-5.1 6-.1m-6.3 2.6 6-.1" fill="none" stroke="#465937" stroke-width="1.1" stroke-linecap="round"/>
+      <text x="11" y="36" class="tech-label">C#</text>
+    </g>
+    <g id="tech-dotnet">
+      <path d="M4 1.2 22 1q3.6 0 3.6 4l-.2 12q0 3.9-4 3.9L4 21Q1 21 1 17L1.2 5q0-3.8 2.8-3.8Z" fill="#c9e6e6" stroke="#547b7e" stroke-width="1.3"/>
+      <circle cx="5" cy="14" r=".95" fill="#385e65"/>
+      <path d="m8 14 .1-6 4.2 6V8m5.2 0H14v6h3.6m-3.6-3h3m2.1-3h4m-2 .2v5.8" fill="none" stroke="#385e65" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="13" y="36" class="tech-label">.NET</text>
+    </g>
+    <g id="tech-winui">
+      <path d="m2 4 8-1 .1 8-8 .2Zm10-1.2 8.8-1 .2 9.2-8.8.1ZM2 13l8-.1.2 8-8.1-.8Zm10.2 0 8.8-.1-.2 9-8.5-1Z" fill="#b8dce2" stroke="#547b7e" stroke-width="1.1" stroke-linejoin="round"/>
+      <text x="11" y="36" class="tech-label">WinUI 3</text>
+    </g>
+    <g id="tech-vue">
+      <path d="m1.3 3 6.6-.1 4.3 7.5 4.5-7.5 6.4.1-11 18.5Z" fill="#bfd695" stroke="#617347" stroke-width="1.3" stroke-linejoin="round"/>
+      <path d="m7.6 3 3.2.1 1.4 2.8L14 3.1l2.9-.1-4.7 8.1Z" fill="#486956" stroke="#486956" stroke-width=".8" stroke-linejoin="round"/>
+      <text x="12" y="36" class="tech-label">Vue</text>
+    </g>
+    <path id="tech-flight" d="M0 0C6-4 11-13 18-11C29-7 16 5 0 0Z"/>
     <g id="paw" fill="var(--paw)">
       <path d="M-8 5c.2-3 4-7 8-7 4.3-.3 8.3 4 8.4 7.2.2 4-3.8 4-8.4 2.4C-3.8 9.1-8.5 9.2-8 5Z"/>
       <ellipse cx="-9" cy="-3" rx="2.8" ry="3.6" transform="rotate(-24 -9 -3)"/>
@@ -36,9 +68,15 @@
     <rect width="880" height="248" fill="url(#paper)"/>
     <path d="M32 12q-2 111 1 228" fill="none" stroke="var(--margin)" stroke-width="1.6" opacity=".61"/>
 
-    <g class="breeze" fill="var(--cloud)" opacity=".88">
-      <path d="M510 84c7-13 18-17 34-13 5-17 18-25 35-24 14-1 26 7 30 17 13-4 27 2 32 12 12 0 22 5 23 11-15 6-54 5-75 6-34 1-64-1-82-3Z"/>
-      <path d="M719 51c3-9 14-13 25-10 4-10 13-15 24-13 10 1 18 7 20 12 12-2 25 1 32 10 7 0 13 3 16 7-16 5-98 4-121 1Z" opacity=".75"/>
+    <g fill="var(--cloud)" opacity=".88">
+      <use class="still" href="#cloud-near"/>
+      <use class="still" href="#cloud-far"/>
+      <use class="moving" href="#cloud-near">
+        <animateTransform attributeName="transform" type="translate" values="-19 0; 32 0; -19 0" dur="11s" repeatCount="indefinite" calcMode="spline" keyTimes="0; .5; 1" keySplines=".42 0 .58 1; .42 0 .58 1" begin="-2.5s"/>
+      </use>
+      <use class="moving" href="#cloud-far">
+        <animateTransform attributeName="transform" type="translate" values="20 0; -22 0; 20 0" dur="16s" repeatCount="indefinite" calcMode="spline" keyTimes="0; .5; 1" keySplines=".42 0 .58 1; .42 0 .58 1" begin="-3s"/>
+      </use>
     </g>
     <path d="M449 238c70-21 110-62 189-84 69-19 110-43 188-46 19-.9 36-2 54-5v145H443Z" fill="var(--far)"/>
     <path d="M543 249c68-10 129-31 177-60 52-31 106-40 160-46v105Z" fill="var(--near)"/>
@@ -52,9 +90,36 @@
       <use href="#paw" transform="translate(708 177) rotate(40) scale(.76)"/>
       <use href="#paw" transform="translate(748 153) rotate(45) scale(.7)"/>
     </g>
-    <g stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M732 111q-6-10-15-8 1 11 13 11-7 3-6 10 9 0 11-10 8 9 14 3-3-9-11-8 7-8 1-13-9 3-7 15Z" fill="#f4d98b"/>
-      <path d="m730 118 8-11m-2 3 6-2" fill="none"/>
+    <use class="still" href="#flower"/>
+    <g class="moving">
+      <animateMotion path="M0 0 C14 -8 27 -25 39 -16 C56 -1 24 4 0 0Z" dur="6.4s" begin="-1s" repeatCount="indefinite"/>
+      <use href="#flower">
+        <animateTransform attributeName="transform" type="rotate" values="-9 734 112; 16 734 112; -9 734 112" dur="3.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0; .5; 1" keySplines=".42 0 .58 1; .42 0 .58 1"/>
+      </use>
+    </g>
+    <use class="still" href="#tech-csharp" transform="translate(502 141) scale(1.25)"/>
+    <g class="moving" transform="translate(502 141)">
+      <use href="#tech-csharp" transform="scale(1.25)">
+        <animateMotion dur="7.4s" begin="-1.4s" repeatCount="indefinite"><mpath href="#tech-flight"/></animateMotion>
+      </use>
+    </g>
+    <use class="still" href="#tech-dotnet" transform="translate(564 171) scale(1.25)"/>
+    <g class="moving" transform="translate(564 171)">
+      <use href="#tech-dotnet" transform="scale(1.25)">
+        <animateMotion dur="8.8s" begin="-4s" repeatCount="indefinite"><mpath href="#tech-flight"/></animateMotion>
+      </use>
+    </g>
+    <use class="still" href="#tech-winui" transform="translate(632 113) scale(1.25)"/>
+    <g class="moving" transform="translate(632 113)">
+      <use href="#tech-winui" transform="scale(1.25)">
+        <animateMotion dur="7.9s" begin="-2.7s" repeatCount="indefinite"><mpath href="#tech-flight"/></animateMotion>
+      </use>
+    </g>
+    <use class="still" href="#tech-vue" transform="translate(800 78) scale(1.25)"/>
+    <g class="moving" transform="translate(800 78)">
+      <use href="#tech-vue" transform="scale(1.25)">
+        <animateMotion dur="9.3s" begin="-5s" repeatCount="indefinite"><mpath href="#tech-flight"/></animateMotion>
+      </use>
     </g>
   </g>
   <use href="#page" fill="none" stroke="var(--edge)" stroke-width="1.6"/>
@@ -64,5 +129,4 @@
   <text x="53" y="128" font-size="63" font-weight="700" fill="var(--ink)" letter-spacing="-1.8">LuoLan</text>
   <path d="M58 141q91 3 194-2m-180 9q62-1 133-3" fill="none" stroke="var(--margin)" stroke-width="3.2" stroke-linecap="round"/>
   <text x="58" y="178" font-size="24" font-weight="700" fill="var(--ink)">Windows apps &amp; open source</text>
-  <text x="58" y="214" font-size="17" font-weight="700" fill="var(--muted)">C#  ·  .NET  ·  WinUI 3</text>
 </svg>
