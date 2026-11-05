@@ -32,17 +32,25 @@ function countLanguages(repositories) {
 
 function statsSection(metrics) {
   return `<text x="0" y="21" class="heading">Open source</text>
+      <path d="M0 29q68 4 156-1" class="underline pink"/>
       <text x="0" y="46" class="caption">Public GitHub activity</text>
+      <g transform="translate(0 75)" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12-3 4 8 9 1-6 6 1 9-8-4-8 4 1-9-7-6 10-2Z" fill="var(--gold)" stroke="var(--star-ink)" stroke-width="1.7"/>
+        <path d="m10 3-2 5-5 1" fill="none" stroke="#fff7da" stroke-width="1.6"/>
+      </g>
       ${metrics.map(([label, value], index) => {
-        const x = index * 129;
-        return `<text x="${x}" y="99" class="value">${number.format(value)}</text>
-      <text x="${x + 1}" y="126" class="label">${label}</text>`;
+        const valueX = [30, 151, 280][index];
+        const formatted = number.format(value);
+        const fit = formatted.length > 5 ? ' textLength="105" lengthAdjust="spacingAndGlyphs"' : '';
+        return `<text x="${valueX}" y="98" class="value"${fit}>${formatted}</text>
+      <text x="${valueX}" y="125" class="label">${label}</text>`;
       }).join('\n      ')}`;
 }
 
 function languageSection(languages) {
   const total = languages.reduce((sum, [, count]) => sum + count, 0);
   const heading = `<text x="0" y="21" class="heading">Primary languages</text>
+      <path d="M1 28q100 5 247 0" class="underline purple"/>
       <text x="0" y="46" class="caption">Public repositories by main language</text>`;
   if (!total) {
     return `${heading}
@@ -69,12 +77,14 @@ function languageSection(languages) {
       <g clip-path="url(#bar)">
         ${bars}
       </g>
+      <path d="M6 64q93 1 188 0t180 0q6 0 6 6t-6 6H6q-6 0-6-6t6-6Z" fill="none" stroke="var(--rule)" stroke-width="1.1"/>
       ${legend}`;
 }
 
 function snapshot(metrics, languages, mobile) {
   const width = mobile ? 428 : 880;
   const height = mobile ? 337 : 184;
+  const frame = `M16 3Q${width / 4} .5 ${width / 2} 3T${width - 17} 3Q${width - 3} 3 ${width - 3} 17L${width - 2} ${height - 19}Q${width - 3} ${height - 5} ${width - 17} ${height - 5}Q${width / 2} ${height - 2} 16 ${height - 5}Q2 ${height - 6} 3 ${height - 20}L2 18Q2 4 16 3Z`;
   const description = [
     ...metrics.map(([label, value]) => `${label}: ${number.format(value)}`),
     ...languages.map(([label, value]) => `${label}: ${number.format(value)} repositories`),
@@ -85,24 +95,28 @@ function snapshot(metrics, languages, mobile) {
   <desc id="desc">${escapeXml(description)}</desc>
   <defs>
     <style>
-      svg { --base:#f3f8fb; --tint:#cceaf4; --ink:#152c3d; --muted:#435d70; --accent:#14679d; --edge:#cedfe9; --highlight:#fff; --bar0:#2e8ec7; --bar1:#50b3bb; --bar2:#91badb; --bar3:#b7c7d7; }
+      svg { --paper:#fffbef; --ink:#48384b; --muted:#65516b; --edge:#ddc6d7; --rule:#b2a3c2; --pink:#e99aab; --purple:#b99ddb; --gold:#ffcf64; --star-ink:#765231; --bar0:#ac92d0; --bar1:#e396ad; --bar2:#88bdad; --bar3:#e7bb70; }
       @media (prefers-color-scheme:dark) {
-        svg { --base:#202b36; --tint:#224558; --ink:#f0f7ff; --muted:#becfdd; --accent:#91cfff; --edge:#445e71; --highlight:#668396; --bar0:#65b7ea; --bar1:#69c5c9; --bar2:#8aaac9; --bar3:#778a9e; }
+        svg { --paper:#292330; --ink:#f6e5ef; --muted:#dac6de; --edge:#624b65; --rule:#8f789f; --pink:#e594b4; --purple:#b395db; --gold:#efbc69; --star-ink:#62472b; --bar0:#ad95d5; --bar1:#dd91aa; --bar2:#86bcad; --bar3:#d8ae75; }
       }
-      text { font-family:Segoe UI Variable, Segoe UI, system-ui, sans-serif; }
-      .heading { font-size:24px; font-weight:650; fill:var(--ink); }
-      .caption, .label { font-size:15px; fill:var(--muted); }
-      .value { font-size:36px; font-weight:650; fill:var(--accent); }
+      text { font-family:"Segoe Print","Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif; }
+      .heading { font-size:23px; font-weight:700; fill:var(--ink); }
+      .caption, .label { font-size:14px; fill:var(--muted); }
+      .value { font-size:31px; font-weight:700; fill:var(--ink); }
+      .underline { fill:none; stroke-width:2.4; stroke-linecap:round; }
+      .pink { stroke:var(--pink); }
+      .purple { stroke:var(--purple); }
     </style>
-    <radialGradient id="mica" cx=".82" cy="0" r=".8">
-      <stop stop-color="var(--tint)"/>
-      <stop offset="1" stop-color="var(--base)"/>
-    </radialGradient>
+    <path id="sheet" d="${frame}"/>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r=".8" fill="var(--rule)" opacity=".23"/>
+    </pattern>
     <clipPath id="bar"><rect y="64" width="${sectionWidth}" height="12" rx="6"/></clipPath>
   </defs>
-  <rect x=".5" y=".5" width="${width - 1}" height="${height - 1}" rx="16" fill="url(#mica)" stroke="var(--edge)"/>
-  <path d="M17 1.5h${width - 34}" stroke="var(--highlight)" stroke-opacity=".8"/>
-  <path d="${mobile ? 'M24 165h380' : 'M440 23v138'}" stroke="var(--edge)"/>
+  <use href="#sheet" transform="translate(0 2)" fill="var(--edge)" opacity=".6"/>
+  <use href="#sheet" fill="var(--paper)" stroke="var(--edge)" stroke-width="1.6"/>
+  <use href="#sheet" fill="url(#dots)"/>
+  <path d="${mobile ? 'M24 165q184-3 380 1' : 'M440 23q3 68-1 138'}" fill="none" stroke="var(--rule)" stroke-width="1.4" stroke-dasharray="4 5" stroke-linecap="round"/>
   <g transform="translate(${mobile ? '24 25' : '28 25'})">
       ${statsSection(metrics)}
   </g>

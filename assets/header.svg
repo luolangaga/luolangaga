@@ -1,58 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="248" viewBox="0 0 880 248" role="img" aria-labelledby="title desc">
   <title id="title">LuoLan</title>
-  <desc id="desc">Windows apps and open source. Three ice-blue glass windows float over a teal backdrop.</desc>
+  <desc id="desc">Windows apps and open source. A hand-drawn colored pencil trails a looping line beside a golden star.</desc>
   <defs>
     <style>
-      svg { --base:#f4f9fc; --ink:#142c3c; --muted:#3e5b6c; --accent:#125b90; --edge:#c9dce7; --mist:#addfe8; --blue:#84c5f0; --pill:white; --grid:#52829d; --shadow:#245478; }
+      svg { --paper:#fffbef; --ink:#48384b; --muted:#65516b; --line:#ddc6d7; --rule:#c2b9da; --rose:#eb9aaa; --lilac:#ded0f7; --gold:#ffcf64; --wood:#ffe1aa; --patch:#f4edfd; }
       @media (prefers-color-scheme:dark) {
-        svg { --base:#202b36; --ink:#f3f8ff; --muted:#c3d4df; --accent:#a7dcff; --edge:#486172; --mist:#215e70; --blue:#276394; --pill:#30485a; --grid:#a8cce1; --shadow:#071322; }
+        svg { --paper:#292330; --ink:#f6e5ef; --muted:#dac6de; --line:#624b65; --rule:#675780; --rose:#e594b4; --lilac:#8169ab; --gold:#efbc69; --wood:#e3a885; --patch:#3b2d4d; }
       }
-      .float { animation: hover 8s ease-in-out infinite; }
-      @keyframes hover { 50% { transform: translateY(-7px); } }
-      @media (prefers-reduced-motion:reduce) { .float { animation:none; } }
+      .twinkle { transform-box:fill-box; transform-origin:center; animation:wiggle 5.5s ease-in-out infinite; }
+      @keyframes wiggle { 0%, 72%, 100% { transform:rotate(0); } 80% { transform:rotate(-8deg) scale(1.07); } 90% { transform:rotate(6deg); } }
+      @media (prefers-reduced-motion:reduce) { .twinkle { animation:none; } }
+      text { font-family:"Segoe Print","Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif; }
     </style>
-    <clipPath id="frame"><rect x="1" y="1" width="878" height="246" rx="20"/></clipPath>
-    <radialGradient id="mist" cx=".82" cy=".15" r=".72"><stop stop-color="var(--mist)"/><stop offset="1" stop-color="var(--mist)" stop-opacity="0"/></radialGradient>
-    <radialGradient id="blue" cx=".98" cy=".98" r=".6"><stop stop-color="var(--blue)" stop-opacity=".74"/><stop offset="1" stop-color="var(--blue)" stop-opacity="0"/></radialGradient>
-    <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#f9ffff" stop-opacity=".94"/><stop offset=".47" stop-color="#d7f7fd" stop-opacity=".69"/><stop offset="1" stop-color="#71b9e8" stop-opacity=".7"/></linearGradient>
-    <linearGradient id="rim" x2=".8" y2="1"><stop stop-color="#fff"/><stop offset=".56" stop-color="#ebffff" stop-opacity=".66"/><stop offset="1" stop-color="#7bb5d8"/></linearGradient>
-    <linearGradient id="tile" x2="1" y2="1"><stop stop-color="#54d3e6"/><stop offset=".5" stop-color="#168cd3"/><stop offset="1" stop-color="#3265c1"/></linearGradient>
-    <linearGradient id="shine" x2=".75" y2="1"><stop stop-color="#fff" stop-opacity=".72"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-    <linearGradient id="fade"><stop offset=".43" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></linearGradient>
-    <mask id="gridFade"><rect width="880" height="248" fill="url(#fade)"/></mask>
-    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(-22)"><path d="M26 0H0V26" fill="none" stroke="var(--grid)" stroke-opacity=".25"/></pattern>
-    <filter id="lift" x="-.24" y="-.24" width="1.48" height="1.65"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="var(--shadow)" flood-opacity=".29"/></filter>
-    <rect id="pane" width="195" height="144" rx="17" fill="url(#glass)" stroke="url(#rim)" stroke-width="2"/>
+    <pattern id="paper" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M0 .5h28" stroke="var(--rule)" stroke-opacity=".29"/>
+    </pattern>
+    <path id="page" d="M21 13Q222 7 433 11T860 10Q872 11 872 26L873 222Q871 237 856 236Q649 241 431 236T26 238Q10 236 10 222L8 29Q7 16 21 13Z"/>
+    <clipPath id="pageClip"><use href="#page"/></clipPath>
   </defs>
-  <g clip-path="url(#frame)">
-    <rect width="880" height="248" fill="var(--base)"/>
-    <rect width="880" height="248" fill="url(#mist)"/>
-    <rect width="880" height="248" fill="url(#blue)"/>
-    <rect x="418" width="462" height="248" fill="url(#grid)" mask="url(#gridFade)"/>
-    <g font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif">
-      <rect x="40" y="31" width="130" height="29" rx="14.5" fill="var(--pill)" fill-opacity=".76" stroke="var(--edge)"/>
-      <circle cx="55" cy="45.5" r="3.5" fill="var(--accent)"/>
-      <text x="66" y="50" font-size="13" font-weight="600" fill="var(--accent)">@luolangaga</text>
-      <text x="36" y="130" font-size="74" font-weight="650" letter-spacing="-3" fill="var(--ink)">LuoLan</text>
-      <text x="41" y="168" font-size="25" font-weight="500" fill="var(--muted)">Windows apps &amp; open source</text>
-      <path d="M41 192h254" stroke="var(--edge)"/>
-      <text x="41" y="217" font-size="16" font-weight="600" fill="var(--accent)">C#  ·  .NET  ·  WinUI 3</text>
+  <use href="#page" transform="translate(1 3)" fill="var(--line)" opacity=".54"/>
+  <use href="#page" fill="var(--paper)" stroke="var(--line)" stroke-width="1.6"/>
+  <g clip-path="url(#pageClip)">
+    <rect width="880" height="248" fill="url(#paper)"/>
+    <path d="M32 12q-2 111 1 228" fill="none" stroke="var(--rose)" stroke-width="1.6" opacity=".62"/>
+    <path d="M502 79q31-28 67-25t69-9q67-12 124 17t51 75q-6 49-74 64t-138-2q-66-5-99-35t0-85Z" fill="var(--patch)" opacity=".78"/>
+  </g>
+
+  <text x="58" y="53" font-size="16" font-weight="700" fill="var(--muted)">@luolangaga</text>
+  <path d="M59 60q52 3 110-1" stroke="var(--rose)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <text x="53" y="128" font-size="63" font-weight="700" fill="var(--ink)" letter-spacing="-1.8">LuoLan</text>
+  <path d="M58 141q91 3 194-2m-180 9q62-1 133-3" fill="none" stroke="var(--rose)" stroke-width="3.2" stroke-linecap="round"/>
+  <text x="58" y="178" font-size="24" font-weight="700" fill="var(--ink)">Windows apps &amp; open source</text>
+  <text x="58" y="214" font-size="17" font-weight="700" fill="var(--muted)">C#  ·  .NET  ·  WinUI 3</text>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M456 176c26 24 102 38 127 12s-37-39-39-16 76 19 109-3l30-25" stroke="var(--muted)" stroke-width="2.6" stroke-dasharray="5 7"/>
+    <path d="m519 94 5-10m-12 5 14 6m276 69 8-11m-13 4 14 7" stroke="var(--rose)" stroke-width="3"/>
+    <path d="M542 113l3 9 9 3-9 3-3 9-3-9-9-3 9-3zM785 51l3 7 8 3-8 3-3 8-3-8-8-3 8-3z" fill="var(--lilac)" stroke="var(--muted)" stroke-width="1.6"/>
+    <path d="M752 187c-5-10-16-5-9 4l8 9 10-10c5-10-7-12-9-3Z" fill="var(--rose)" stroke="var(--muted)" stroke-width="1.7"/>
+    <g class="twinkle">
+      <path d="M611 60l12 23 26 2-19 19 5 26-24-12-23 14 4-27-20-18 27-4Z" fill="var(--gold)" stroke="var(--ink)" stroke-width="3"/>
+      <path d="m606 70-7 19-19 2m16 31 14-9" stroke="#fff7db" stroke-width="3.4" opacity=".74"/>
+      <path d="m574 66-9-7m72 7 7-8m9 56 10 3m-76 21-4 8" stroke="var(--muted)" stroke-width="2.2"/>
     </g>
-    <g transform="matrix(1 -.21 .42 .86 511 75)">
-      <use href="#pane" x="81" y="48" filter="url(#lift)"/>
-      <use href="#pane" x="43" y="25" filter="url(#lift)"/>
-      <path d="M61 52h155m-155 94h53" fill="none" stroke="#fff" stroke-opacity=".55"/>
-    </g>
-    <g class="float">
-      <g transform="matrix(1 -.21 .42 .86 511 75)">
-        <use href="#pane" filter="url(#lift)"/>
-        <path d="M1 25V17A16 16 0 0 1 17 1H178A16 16 0 0 1 194 17V25Z" fill="#fff" fill-opacity=".42"/>
-        <path d="M1 25h193" stroke="#fff" stroke-opacity=".72"/>
-        <path d="M146 13h10m8-3h6v6h-6zm14-3 6 6m0-6-6 6" fill="none" stroke="#366886" stroke-linecap="round" opacity=".72"/>
-        <path d="M68 51h26v26H68zm33 0h26v26h-26zm-33 33h26v26H68zm33 0h26v26h-26z" fill="url(#tile)" stroke="#e8ffff" stroke-opacity=".65"/>
-        <path d="M1 55 116 26h46L1 93Z" fill="url(#shine)" opacity=".55"/>
-      </g>
+    <g transform="rotate(-31 691 147)" stroke="var(--ink)" stroke-width="2.6">
+      <path d="m691 134 111-1q10 1 10 13t-10 14l-111-1-24-12Z" fill="var(--wood)"/>
+      <path d="m691 134 99-1-1 27-98-1 4-7-3-7 4-6Z" fill="var(--lilac)"/>
+      <path d="m696 143 93-1m-94 10 93-1" stroke="var(--muted)" stroke-width="1.4" opacity=".65"/>
+      <path d="M790 133h12q10 1 10 13t-10 14h-13Z" fill="var(--rose)"/>
+      <path d="m668 147 10-6 1 12Z" fill="var(--ink)" stroke-width="1"/>
+      <path d="m698 137 87-1" stroke="#fff8f4" stroke-opacity=".74" stroke-width="2.2"/>
     </g>
   </g>
-  <rect x="1" y="1" width="878" height="246" rx="20" fill="none" stroke="var(--edge)"/>
 </svg>
