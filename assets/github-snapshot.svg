@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="184" viewBox="0 0 880 184" role="img" aria-labelledby="title desc">
   <title id="title">GitHub snapshot</title>
-  <desc id="desc">Stars: 6,220, Followers: 97, Public repos: 32, C#: 62%, JavaScript: 19%, HTML: 11%, Other: 8%</desc>
+  <desc id="desc">Stars: 6,239, Followers: 97, Public repos: 29, C#: 65%, HTML: 13%, JavaScript: 13%, Other: 9%</desc>
   <defs>
     <style>
       svg { --paper:#fff8e9; --ink:#514334; --muted:#675749; --edge:#d1c4a8; --rule:#b4a982; --green:#a5b966; --blue:#88bfc4; --gold:#f3ce73; --star-ink:#765536; --bar0:#a2b968; --bar1:#81bcc9; --bar2:#dfbd73; --bar3:#bca187; }
@@ -33,11 +33,11 @@
         <path d="m12-3 4 8 9 1-6 6 1 9-8-4-8 4 1-9-7-6 10-2Z" fill="var(--gold)" stroke="var(--star-ink)" stroke-width="1.7"/>
         <path d="m10 3-2 5-5 1" fill="none" stroke="#fff7da" stroke-width="1.6"/>
       </g>
-      <text x="30" y="98" class="value">6,220</text>
+      <text x="30" y="98" class="value">6,239</text>
       <text x="30" y="125" class="label">Stars</text>
       <text x="151" y="98" class="value">97</text>
       <text x="151" y="125" class="label">Followers</text>
-      <text x="280" y="98" class="value">32</text>
+      <text x="280" y="98" class="value">29</text>
       <text x="280" y="125" class="label">Public repos</text>
   </g>
   <g transform="translate(468 25)">
@@ -45,23 +45,23 @@
       <path d="M1 28q100 5 247 0" class="underline blue"/>
       <text x="0" y="46" class="caption">Share of public repos by main language</text>
       <g clip-path="url(#bar)">
-        <rect x="0.00" y="64" width="233.85" height="12" fill="var(--bar0)"/>
-        <rect x="233.85" y="64" width="73.08" height="12" fill="var(--bar1)"/>
-        <rect x="306.92" y="64" width="43.85" height="12" fill="var(--bar2)"/>
-        <rect x="350.77" y="64" width="29.23" height="12" fill="var(--bar3)"/>
+        <rect x="0.00" y="64" width="247.83" height="12" fill="var(--bar0)"/>
+        <rect x="247.83" y="64" width="49.57" height="12" fill="var(--bar1)"/>
+        <rect x="297.39" y="64" width="49.57" height="12" fill="var(--bar2)"/>
+        <rect x="346.96" y="64" width="33.04" height="12" fill="var(--bar3)"/>
       </g>
       <path d="M6 64q93 1 188 0t180 0q6 0 6 6t-6 6H6q-6 0-6-6t6-6Z" fill="none" stroke="var(--rule)" stroke-width="1.1"/>
       <circle cx="4" cy="99" r="4" fill="var(--bar0)"/>
       <text x="16" y="104" class="label">C#</text>
-      <text x="182" y="104" class="label" text-anchor="end">62%</text>
+      <text x="182" y="104" class="label" text-anchor="end">65%</text>
       <circle cx="198" cy="99" r="4" fill="var(--bar1)"/>
-      <text x="210" y="104" class="label">JavaScript</text>
-      <text x="376" y="104" class="label" text-anchor="end">19%</text>
+      <text x="210" y="104" class="label">HTML</text>
+      <text x="376" y="104" class="label" text-anchor="end">13%</text>
       <circle cx="4" cy="122" r="4" fill="var(--bar2)"/>
-      <text x="16" y="127" class="label">HTML</text>
-      <text x="182" y="127" class="label" text-anchor="end">11%</text>
+      <text x="16" y="127" class="label">JavaScript</text>
+      <text x="182" y="127" class="label" text-anchor="end">13%</text>
       <circle cx="198" cy="122" r="4" fill="var(--bar3)"/>
       <text x="210" y="127" class="label">Other</text>
-      <text x="376" y="127" class="label" text-anchor="end">8%</text>
+      <text x="376" y="127" class="label" text-anchor="end">9%</text>
   </g>
 </svg>
