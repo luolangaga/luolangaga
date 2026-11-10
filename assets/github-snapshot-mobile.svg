@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="428" height="337" viewBox="0 0 428 337" role="img" aria-labelledby="title desc">
   <title id="title">GitHub snapshot</title>
-  <desc id="desc">Stars: 6,297, Followers: 97, Public repos: 29, C#: 65%, HTML: 13%, JavaScript: 13%, Other: 9%</desc>
+  <desc id="desc">Stars: 6,321, Followers: 97, Public repos: 29, C#: 65%, HTML: 13%, JavaScript: 13%, Other: 9%</desc>
   <defs>
     <style>
       svg { --paper:#fff8e9; --ink:#514334; --muted:#675749; --edge:#d1c4a8; --rule:#b4a982; --green:#a5b966; --blue:#88bfc4; --gold:#f3ce73; --star-ink:#765536; --bar0:#a2b968; --bar1:#81bcc9; --bar2:#dfbd73; --bar3:#bca187; }
@@ -33,7 +33,7 @@
         <path d="m12-3 4 8 9 1-6 6 1 9-8-4-8 4 1-9-7-6 10-2Z" fill="var(--gold)" stroke="var(--star-ink)" stroke-width="1.7"/>
         <path d="m10 3-2 5-5 1" fill="none" stroke="#fff7da" stroke-width="1.6"/>
       </g>
-      <text x="30" y="98" class="value">6,297</text>
+      <text x="30" y="98" class="value">6,321</text>
       <text x="30" y="125" class="label">Stars</text>
       <text x="151" y="98" class="value">97</text>
       <text x="151" y="125" class="label">Followers</text>
